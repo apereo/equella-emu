@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<emu_profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <institution_url>http://equella.dyndns.org/50/prototype</institution_url>
+  <username>jimk</username>
+  <password>hK7b8gbmZgJem3Cb8/0mJQ==</password>
+  <shared_secret_login>false</shared_secret_login>
+  <use_proxy>false</use_proxy>
+  <proxy_address />
+  <proxy_username />
+  <proxy_password />
+  <ss_username />
+  <shared_secret_id />
+  <shared_secret>42N/Iai7ubx9OijN2xcJRg==</shared_secret>
+  <log_file_location>C:\Users\Jim\Documents\Work\Utah\Emulogs</log_file_location>
+  <where_statement />
+  <freetext_query />
+  <all_collections>true</all_collections>
+  <collections_list>
+    <collection xsi:type="xsd:string">Large Collection</collection>
+  </collections_list>
+  <columns_include_name>true</columns_include_name>
+  <columns_include_itemid>true</columns_include_itemid>
+  <columns_include_itemversion>true</columns_include_itemversion>
+  <columns_list>
+    <column xsi:type="xsd:string">/xml/item/itembody/keywords/keyword</column>
+    <column xsi:type="xsd:string">/xml/item/itembody/testnodes/test</column>
+    <column xsi:type="xsd:string">/xml/item/itembody/testnodes/test/@attr</column>
+  </columns_list>
+  <delimiter>|</delimiter>
+  <sort_order>Rank</sort_order>
+  <reverse_sort>false</reverse_sort>
+  <include_nonlive>false</include_nonlive>
+  <modifier_list>
+    <modifier xsi:type="ModifierUpdateText">
+      <Enabled>false</Enabled>
+      <xpath>/xml/item/itembody/testnodes/@test</xpath>
+      <updateText>value 1</updateText>
+      <createNode>false</createNode>
+    </modifier>
+    <modifier xsi:type="ModifierUpdateText">
+      <Enabled>false</Enabled>
+      <xpath>/xml/item/itembody/testnodes/@test</xpath>
+      <updateText>value 2</updateText>
+      <createNode>false</createNode>
+    </modifier>
+    <modifier xsi:type="ModifierUpdateText">
+      <Enabled>false</Enabled>
+      <xpath>/xml/item/itembody/testnodes/one/two</xpath>
+      <updateText>Some intermediate text</updateText>
+      <createNode>false</createNode>
+    </modifier>
+    <modifier xsi:type="ModifierRemoveNode">
+      <Enabled>false</Enabled>
+      <xpath>/xml/item/itembody/testnodes</xpath>
+    </modifier>
+    <modifier xsi:type="ModifierUpdateText">
+      <Enabled>false</Enabled>
+      <xpath>/xml/item/itembody/parent/child</xpath>
+      <updateText>some text</updateText>
+      <createNode>false</createNode>
+    </modifier>
+  </modifier_list>
+  <update_all_results>true</update_all_results>
+  <update_first_few_only>false</update_first_few_only>
+  <update_first_few_number>0</update_first_few_number>
+  <logOutputSize>0</logOutputSize>
+  <create_log_file>false</create_log_file>
+</emu_profile>

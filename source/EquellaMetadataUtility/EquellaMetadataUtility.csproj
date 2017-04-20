@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5142259-E52F-4FA2-9C7A-25C80A1B4425}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EquellaMetadataUtility</RootNamespace>
+    <AssemblyName>emu</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>emubig.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>AF0007D62F6D0CE12CC9584C03C2333E7A29E0BD</ManifestCertificateThumbprint>
+    <ManifestKeyFile>EquellaMetadataUtility_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <SignManifests>true</SignManifests>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Vsa" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierScript.cs" />
+    <Compile Include="ModifierScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierScriptForm.Designer.cs">
+      <DependentUpon>ModifierScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierXSLT.cs" />
+    <Compile Include="ModifiersExport.cs" />
+    <Compile Include="ModifierReplaceText.cs" />
+    <Compile Include="ModifierCopyXML.cs" />
+    <Compile Include="EquellaClient.cs" />
+    <Compile Include="Collections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections.Designer.cs">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierAddXML.cs" />
+    <Compile Include="ModifierAddXMLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierAddXMLForm.Designer.cs">
+      <DependentUpon>ModifierAddXMLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierCopyXMLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierCopyXMLForm.Designer.cs">
+      <DependentUpon>ModifierCopyXMLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierRemoveNode.cs" />
+    <Compile Include="ModifierRemoveNodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierRemoveNodeForm.Designer.cs">
+      <DependentUpon>ModifierRemoveNodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierRenameNode.cs" />
+    <Compile Include="ModifierRenameNodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierRenameNodeForm.Designer.cs">
+      <DependentUpon>ModifierRenameNodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierReplaceTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierReplaceTextForm.Designer.cs">
+      <DependentUpon>ModifierReplaceTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierUpdateText.cs" />
+    <Compile Include="ModifierUpdateTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierUpdateTextForm.Designer.cs">
+      <DependentUpon>ModifierUpdateTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierXSLTForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierXSLTForm.Designer.cs">
+      <DependentUpon>ModifierXSLTForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections.resx">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierScriptForm.resx">
+      <DependentUpon>ModifierScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierAddXMLForm.resx">
+      <DependentUpon>ModifierAddXMLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierCopyXMLForm.resx">
+      <DependentUpon>ModifierCopyXMLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierRemoveNodeForm.resx">
+      <DependentUpon>ModifierRemoveNodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierRenameNodeForm.resx">
+      <DependentUpon>ModifierRenameNodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierReplaceTextForm.resx">
+      <DependentUpon>ModifierReplaceTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierUpdateTextForm.resx">
+      <DependentUpon>ModifierUpdateTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierXSLTForm.resx">
+      <DependentUpon>ModifierXSLTForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewItemXMLForm.resx">
+      <DependentUpon>ViewItemXMLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewNodeXMLForm.resx">
+      <DependentUpon>ViewNodeXMLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EQUELLA\SoapService41.wsdl" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RijndaelSimple.cs" />
+    <Compile Include="ScriptEngine.cs" />
+    <Compile Include="Service References\EQUELLA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="ViewItemXMLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewItemXMLForm.Designer.cs">
+      <DependentUpon>ViewItemXMLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewNodeXMLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewNodeXMLForm.Designer.cs">
+      <DependentUpon>ViewNodeXMLForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EQUELLA\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EQUELLA\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EQUELLA\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EquellaMetadataUtility_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Service References\EQUELLA\EquellaMetadataUtility.EQUELLA.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EQUELLA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="emu.ico" />
+    <Content Include="emubig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CsvReader\LumenWorks.Framework.IO\LumenWorks.Framework.IO.csproj">
+      <Project>{E3B83D68-C90C-4874-8E5F-DEC8D038BC7C}</Project>
+      <Name>LumenWorks.Framework.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FastColoredTextBox\FastColoredTextBox.csproj">
+      <Project>{6DD14A85-CCFC-4774-BD26-0F5772512319}</Project>
+      <Name>FastColoredTextBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

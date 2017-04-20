@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+   <Product Id='369d4343-dbd7-4c6d-9af2-588830589119' Name='EQUELLA Metadata Utility (EMU)' Language='1033' 
+            Version='2.1.3' Manufacturer='Pearson plc.' UpgradeCode='369d4343-dbd7-4c6d-9af2-588830589119' >
+      <Package Description='EQUELLA Metadata Utility (EMU) Installer package'
+               Comments='EQUELLA Metadata Utility MSI'
+               Manufacturer='Pearson plc.'
+               InstallerVersion='200'
+               Compressed='yes' />
+
+      <Media Id='1' Cabinet='product.cab' EmbedCab='yes' />
+
+	<Icon Id="emubig.ico" SourceFile="emubig.ico"/>
+	<Property Id="ARPPRODUCTICON" Value="emubig.ico" />
+
+
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder">
+                <Directory Id="APPLICATIONROOTDIRECTORY" Name="Emu"/>
+            </Directory>
+	    <Directory Id="ProgramMenuFolder">
+	        <Directory Id="ApplicationProgramsFolder" Name="EQUELLA Metadata Utility (EMU)"/>
+	    </Directory>
+        </Directory>
+
+
+        <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+            <Component Id="emu.exe" Guid="369d4343-dbd7-4c6d-9af2-588830589119">
+                <File Id="emu.exe" Source="..\EquellaMetadataUtility\bin\Release\emu.exe" KeyPath="yes" Checksum="yes"/>
+            </Component>
+            <Component Id="FastColoredTextBox.dll">
+                <File Id="FastColoredTextBox.dll" Source="..\EquellaMetadataUtility\bin\Release\FastColoredTextBox.dll" KeyPath="yes" Checksum="yes"/>
+            </Component>			
+            <Component Id="LumenWorks.Framework.IO.dll">
+                <File Id="LumenWorks.Framework.IO.dll" Source="..\EquellaMetadataUtility\bin\Release\LumenWorks.Framework.IO.dll" KeyPath="yes" Checksum="yes"/>
+            </Component>
+		</DirectoryRef>
+
+	<DirectoryRef Id="ApplicationProgramsFolder">
+	    <Component Id="ApplicationShortcut" Guid="369d4343-dbd7-4c6d-9af2-588830589000">
+	        <Shortcut Id="ApplicationStartMenuShortcut" 
+	                  Name="EQUELLA Metadata Utility (EMU)"
+	                  Description="EQUELLA Metadata Utility (EMU)"
+	                  Target="[APPLICATIONROOTDIRECTORY]emu.exe"
+	                  WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+	        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+	        <RegistryValue Root="HKCU" Key="Software\TLEI\emu" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+	    </Component>
+	</DirectoryRef>
+
+
+        <Feature Id="MainApplication" Title="Main Application" Level="1">
+            <ComponentRef Id="emu.exe" />
+			<ComponentRef Id="FastColoredTextBox.dll" />
+			<ComponentRef Id="LumenWorks.Framework.IO.dll" />
+            <ComponentRef Id="ApplicationShortcut" />
+        </Feature>
+
+
+	<WixVariable Id="WixUILicenseRtf" Value="License.rtf" /> 
+	<WixVariable Id="WixUIBannerBmp" Value="emubig.bmp" /> 
+	<WixVariable Id="WixUIDialogBmp" Value="Splatter2.bmp" />
+
+	<Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONROOTDIRECTORY" />
+	<UIRef Id="WixUI_InstallDir" />
+
+   </Product>
+</Wix>

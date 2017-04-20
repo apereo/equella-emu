@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://soap.remoting.web.tle.com" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" targetNamespace="http://soap.remoting.web.tle.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://soap.remoting.web.tle.com">
+      <xsd:element name="addGroup">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addGroupResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getContributableCollections">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getContributableCollectionsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTaskFilterNames">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getTaskFilterNamesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in5" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSchema">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSchemaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="rejectTask">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in5" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="rejectTaskResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uploadFile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="uploadFileResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="userExists">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userExistsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="newItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="newItemResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteItemResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getItemResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="newVersionItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="newVersionItemResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteGroup">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteGroupResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="login">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loginResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removeUserFromAllGroups">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removeUserFromAllGroupsResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="editItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="editItemResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCollection">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCollectionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteFile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteFileResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="addUserToGroup">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addUserToGroupResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="acceptTask">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="acceptTaskResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchItems">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in5" type="xsd:boolean" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in6" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in7" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchItemsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="editUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in3" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in4" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in5" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="editUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="isUserInGroup">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="isUserInGroupResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="unlock">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="unlockResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userNameExists">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="userNameExistsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTaskList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTaskListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removeUserFromGroup">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removeUserFromGroupResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="keepAlive">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="keepAliveResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="queryCount">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="tns:ArrayOfString" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="queryCountResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelItemEdit">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelItemEditResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="saveItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="saveItemResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="groupExists">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="groupExistsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removeAllUsersFromGroup">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="removeAllUsersFromGroupResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="logout">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="logoutResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="loginWithToken">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loginWithTokenResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="unzipFile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in2" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="unzipFileResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getGroupUuidForName">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getGroupUuidForNameResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteUserResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="archiveItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="in1" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="archiveItemResponse">
+        <xsd:complexType />
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="addUserToGroupResponse">
+    <wsdl:part name="parameters" element="tns:addUserToGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCollectionRequest">
+    <wsdl:part name="parameters" element="tns:getCollection" />
+  </wsdl:message>
+  <wsdl:message name="editUserRequest">
+    <wsdl:part name="parameters" element="tns:editUser" />
+  </wsdl:message>
+  <wsdl:message name="editUserResponse">
+    <wsdl:part name="parameters" element="tns:editUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteUserResponse">
+    <wsdl:part name="parameters" element="tns:deleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteFileResponse">
+    <wsdl:part name="parameters" element="tns:deleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getGroupUuidForNameResponse">
+    <wsdl:part name="parameters" element="tns:getGroupUuidForNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="editItemResponse">
+    <wsdl:part name="parameters" element="tns:editItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="archiveItemResponse">
+    <wsdl:part name="parameters" element="tns:archiveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginWithTokenRequest">
+    <wsdl:part name="parameters" element="tns:loginWithToken" />
+  </wsdl:message>
+  <wsdl:message name="rejectTaskRequest">
+    <wsdl:part name="parameters" element="tns:rejectTask" />
+  </wsdl:message>
+  <wsdl:message name="archiveItemRequest">
+    <wsdl:part name="parameters" element="tns:archiveItem" />
+  </wsdl:message>
+  <wsdl:message name="getGroupUuidForNameRequest">
+    <wsdl:part name="parameters" element="tns:getGroupUuidForName" />
+  </wsdl:message>
+  <wsdl:message name="removeAllUsersFromGroupResponse">
+    <wsdl:part name="parameters" element="tns:removeAllUsersFromGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryCountResponse">
+    <wsdl:part name="parameters" element="tns:queryCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="rejectTaskResponse">
+    <wsdl:part name="parameters" element="tns:rejectTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeUserFromGroupResponse">
+    <wsdl:part name="parameters" element="tns:removeUserFromGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteGroupResponse">
+    <wsdl:part name="parameters" element="tns:deleteGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="keepAliveResponse">
+    <wsdl:part name="parameters" element="tns:keepAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelItemEditRequest">
+    <wsdl:part name="parameters" element="tns:cancelItemEdit" />
+  </wsdl:message>
+  <wsdl:message name="isUserInGroupRequest">
+    <wsdl:part name="parameters" element="tns:isUserInGroup" />
+  </wsdl:message>
+  <wsdl:message name="unzipFileResponse">
+    <wsdl:part name="parameters" element="tns:unzipFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getContributableCollectionsResponse">
+    <wsdl:part name="parameters" element="tns:getContributableCollectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchItemsResponse">
+    <wsdl:part name="parameters" element="tns:searchItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="unzipFileRequest">
+    <wsdl:part name="parameters" element="tns:unzipFile" />
+  </wsdl:message>
+  <wsdl:message name="addGroupResponse">
+    <wsdl:part name="parameters" element="tns:addGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCollectionResponse">
+    <wsdl:part name="parameters" element="tns:getCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteFileRequest">
+    <wsdl:part name="parameters" element="tns:deleteFile" />
+  </wsdl:message>
+  <wsdl:message name="queryCountRequest">
+    <wsdl:part name="parameters" element="tns:queryCount" />
+  </wsdl:message>
+  <wsdl:message name="groupExistsResponse">
+    <wsdl:part name="parameters" element="tns:groupExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="keepAliveRequest">
+    <wsdl:part name="parameters" element="tns:keepAlive" />
+  </wsdl:message>
+  <wsdl:message name="unlockRequest">
+    <wsdl:part name="parameters" element="tns:unlock" />
+  </wsdl:message>
+  <wsdl:message name="userNameExistsResponse">
+    <wsdl:part name="parameters" element="tns:userNameExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserRequest">
+    <wsdl:part name="parameters" element="tns:getUser" />
+  </wsdl:message>
+  <wsdl:message name="logoutRequest">
+    <wsdl:part name="parameters" element="tns:logout" />
+  </wsdl:message>
+  <wsdl:message name="removeUserFromAllGroupsResponse">
+    <wsdl:part name="parameters" element="tns:removeUserFromAllGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="newVersionItemResponse">
+    <wsdl:part name="parameters" element="tns:newVersionItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemResponse">
+    <wsdl:part name="parameters" element="tns:deleteItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginRequest">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="unlockResponse">
+    <wsdl:part name="parameters" element="tns:unlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="addUserToGroupRequest">
+    <wsdl:part name="parameters" element="tns:addUserToGroup" />
+  </wsdl:message>
+  <wsdl:message name="addUserRequest">
+    <wsdl:part name="parameters" element="tns:addUser" />
+  </wsdl:message>
+  <wsdl:message name="acceptTaskResponse">
+    <wsdl:part name="parameters" element="tns:acceptTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadFileResponse">
+    <wsdl:part name="parameters" element="tns:uploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getContributableCollectionsRequest">
+    <wsdl:part name="parameters" element="tns:getContributableCollections" />
+  </wsdl:message>
+  <wsdl:message name="logoutResponse">
+    <wsdl:part name="parameters" element="tns:logoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserResponse">
+    <wsdl:part name="parameters" element="tns:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeUserFromAllGroupsRequest">
+    <wsdl:part name="parameters" element="tns:removeUserFromAllGroups" />
+  </wsdl:message>
+  <wsdl:message name="groupExistsRequest">
+    <wsdl:part name="parameters" element="tns:groupExists" />
+  </wsdl:message>
+  <wsdl:message name="userExistsRequest">
+    <wsdl:part name="parameters" element="tns:userExists" />
+  </wsdl:message>
+  <wsdl:message name="addUserResponse">
+    <wsdl:part name="parameters" element="tns:addUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveItemResponse">
+    <wsdl:part name="parameters" element="tns:saveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchItemsRequest">
+    <wsdl:part name="parameters" element="tns:searchItems" />
+  </wsdl:message>
+  <wsdl:message name="newItemRequest">
+    <wsdl:part name="parameters" element="tns:newItem" />
+  </wsdl:message>
+  <wsdl:message name="getTaskListRequest">
+    <wsdl:part name="parameters" element="tns:getTaskList" />
+  </wsdl:message>
+  <wsdl:message name="getSchemaResponse">
+    <wsdl:part name="parameters" element="tns:getSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelItemEditResponse">
+    <wsdl:part name="parameters" element="tns:cancelItemEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="editItemRequest">
+    <wsdl:part name="parameters" element="tns:editItem" />
+  </wsdl:message>
+  <wsdl:message name="acceptTaskRequest">
+    <wsdl:part name="parameters" element="tns:acceptTask" />
+  </wsdl:message>
+  <wsdl:message name="deleteUserRequest">
+    <wsdl:part name="parameters" element="tns:deleteUser" />
+  </wsdl:message>
+  <wsdl:message name="getItemRequest">
+    <wsdl:part name="parameters" element="tns:getItem" />
+  </wsdl:message>
+  <wsdl:message name="newVersionItemRequest">
+    <wsdl:part name="parameters" element="tns:newVersionItem" />
+  </wsdl:message>
+  <wsdl:message name="removeAllUsersFromGroupRequest">
+    <wsdl:part name="parameters" element="tns:removeAllUsersFromGroup" />
+  </wsdl:message>
+  <wsdl:message name="removeUserFromGroupRequest">
+    <wsdl:part name="parameters" element="tns:removeUserFromGroup" />
+  </wsdl:message>
+  <wsdl:message name="isUserInGroupResponse">
+    <wsdl:part name="parameters" element="tns:isUserInGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteGroupRequest">
+    <wsdl:part name="parameters" element="tns:deleteGroup" />
+  </wsdl:message>
+  <wsdl:message name="deleteItemRequest">
+    <wsdl:part name="parameters" element="tns:deleteItem" />
+  </wsdl:message>
+  <wsdl:message name="getSchemaRequest">
+    <wsdl:part name="parameters" element="tns:getSchema" />
+  </wsdl:message>
+  <wsdl:message name="getTaskFilterNamesRequest">
+    <wsdl:part name="parameters" element="tns:getTaskFilterNames" />
+  </wsdl:message>
+  <wsdl:message name="getTaskFilterNamesResponse">
+    <wsdl:part name="parameters" element="tns:getTaskFilterNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginWithTokenResponse">
+    <wsdl:part name="parameters" element="tns:loginWithTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="userExistsResponse">
+    <wsdl:part name="parameters" element="tns:userExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadFileRequest">
+    <wsdl:part name="parameters" element="tns:uploadFile" />
+  </wsdl:message>
+  <wsdl:message name="saveItemRequest">
+    <wsdl:part name="parameters" element="tns:saveItem" />
+  </wsdl:message>
+  <wsdl:message name="getItemResponse">
+    <wsdl:part name="parameters" element="tns:getItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="newItemResponse">
+    <wsdl:part name="parameters" element="tns:newItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTaskListResponse">
+    <wsdl:part name="parameters" element="tns:getTaskListResponse" />
+  </wsdl:message>
+  <wsdl:message name="addGroupRequest">
+    <wsdl:part name="parameters" element="tns:addGroup" />
+  </wsdl:message>
+  <wsdl:message name="userNameExistsRequest">
+    <wsdl:part name="parameters" element="tns:userNameExists" />
+  </wsdl:message>
+  <wsdl:portType name="SoapService41PortType">
+    <wsdl:operation name="addGroup">
+      <wsdl:input name="addGroupRequest" message="tns:addGroupRequest" />
+      <wsdl:output name="addGroupResponse" message="tns:addGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getContributableCollections">
+      <wsdl:input name="getContributableCollectionsRequest" message="tns:getContributableCollectionsRequest" />
+      <wsdl:output name="getContributableCollectionsResponse" message="tns:getContributableCollectionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTaskFilterNames">
+      <wsdl:input name="getTaskFilterNamesRequest" message="tns:getTaskFilterNamesRequest" />
+      <wsdl:output name="getTaskFilterNamesResponse" message="tns:getTaskFilterNamesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addUser">
+      <wsdl:input name="addUserRequest" message="tns:addUserRequest" />
+      <wsdl:output name="addUserResponse" message="tns:addUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSchema">
+      <wsdl:input name="getSchemaRequest" message="tns:getSchemaRequest" />
+      <wsdl:output name="getSchemaResponse" message="tns:getSchemaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="rejectTask">
+      <wsdl:input name="rejectTaskRequest" message="tns:rejectTaskRequest" />
+      <wsdl:output name="rejectTaskResponse" message="tns:rejectTaskResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadFile">
+      <wsdl:input name="uploadFileRequest" message="tns:uploadFileRequest" />
+      <wsdl:output name="uploadFileResponse" message="tns:uploadFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userExists">
+      <wsdl:input name="userExistsRequest" message="tns:userExistsRequest" />
+      <wsdl:output name="userExistsResponse" message="tns:userExistsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="newItem">
+      <wsdl:input name="newItemRequest" message="tns:newItemRequest" />
+      <wsdl:output name="newItemResponse" message="tns:newItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteItem">
+      <wsdl:input name="deleteItemRequest" message="tns:deleteItemRequest" />
+      <wsdl:output name="deleteItemResponse" message="tns:deleteItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getItem">
+      <wsdl:input name="getItemRequest" message="tns:getItemRequest" />
+      <wsdl:output name="getItemResponse" message="tns:getItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="newVersionItem">
+      <wsdl:input name="newVersionItemRequest" message="tns:newVersionItemRequest" />
+      <wsdl:output name="newVersionItemResponse" message="tns:newVersionItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroup">
+      <wsdl:input name="deleteGroupRequest" message="tns:deleteGroupRequest" />
+      <wsdl:output name="deleteGroupResponse" message="tns:deleteGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input name="loginRequest" message="tns:loginRequest" />
+      <wsdl:output name="loginResponse" message="tns:loginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeUserFromAllGroups">
+      <wsdl:input name="removeUserFromAllGroupsRequest" message="tns:removeUserFromAllGroupsRequest" />
+      <wsdl:output name="removeUserFromAllGroupsResponse" message="tns:removeUserFromAllGroupsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="editItem">
+      <wsdl:input name="editItemRequest" message="tns:editItemRequest" />
+      <wsdl:output name="editItemResponse" message="tns:editItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCollection">
+      <wsdl:input name="getCollectionRequest" message="tns:getCollectionRequest" />
+      <wsdl:output name="getCollectionResponse" message="tns:getCollectionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFile">
+      <wsdl:input name="deleteFileRequest" message="tns:deleteFileRequest" />
+      <wsdl:output name="deleteFileResponse" message="tns:deleteFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addUserToGroup">
+      <wsdl:input name="addUserToGroupRequest" message="tns:addUserToGroupRequest" />
+      <wsdl:output name="addUserToGroupResponse" message="tns:addUserToGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="acceptTask">
+      <wsdl:input name="acceptTaskRequest" message="tns:acceptTaskRequest" />
+      <wsdl:output name="acceptTaskResponse" message="tns:acceptTaskResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchItems">
+      <wsdl:input name="searchItemsRequest" message="tns:searchItemsRequest" />
+      <wsdl:output name="searchItemsResponse" message="tns:searchItemsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="editUser">
+      <wsdl:input name="editUserRequest" message="tns:editUserRequest" />
+      <wsdl:output name="editUserResponse" message="tns:editUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="isUserInGroup">
+      <wsdl:input name="isUserInGroupRequest" message="tns:isUserInGroupRequest" />
+      <wsdl:output name="isUserInGroupResponse" message="tns:isUserInGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="unlock">
+      <wsdl:input name="unlockRequest" message="tns:unlockRequest" />
+      <wsdl:output name="unlockResponse" message="tns:unlockResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input name="getUserRequest" message="tns:getUserRequest" />
+      <wsdl:output name="getUserResponse" message="tns:getUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="userNameExists">
+      <wsdl:input name="userNameExistsRequest" message="tns:userNameExistsRequest" />
+      <wsdl:output name="userNameExistsResponse" message="tns:userNameExistsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTaskList">
+      <wsdl:input name="getTaskListRequest" message="tns:getTaskListRequest" />
+      <wsdl:output name="getTaskListResponse" message="tns:getTaskListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeUserFromGroup">
+      <wsdl:input name="removeUserFromGroupRequest" message="tns:removeUserFromGroupRequest" />
+      <wsdl:output name="removeUserFromGroupResponse" message="tns:removeUserFromGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="keepAlive">
+      <wsdl:input name="keepAliveRequest" message="tns:keepAliveRequest" />
+      <wsdl:output name="keepAliveResponse" message="tns:keepAliveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryCount">
+      <wsdl:input name="queryCountRequest" message="tns:queryCountRequest" />
+      <wsdl:output name="queryCountResponse" message="tns:queryCountResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelItemEdit">
+      <wsdl:input name="cancelItemEditRequest" message="tns:cancelItemEditRequest" />
+      <wsdl:output name="cancelItemEditResponse" message="tns:cancelItemEditResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="saveItem">
+      <wsdl:input name="saveItemRequest" message="tns:saveItemRequest" />
+      <wsdl:output name="saveItemResponse" message="tns:saveItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="groupExists">
+      <wsdl:input name="groupExistsRequest" message="tns:groupExistsRequest" />
+      <wsdl:output name="groupExistsResponse" message="tns:groupExistsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="removeAllUsersFromGroup">
+      <wsdl:input name="removeAllUsersFromGroupRequest" message="tns:removeAllUsersFromGroupRequest" />
+      <wsdl:output name="removeAllUsersFromGroupResponse" message="tns:removeAllUsersFromGroupResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input name="logoutRequest" message="tns:logoutRequest" />
+      <wsdl:output name="logoutResponse" message="tns:logoutResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="loginWithToken">
+      <wsdl:input name="loginWithTokenRequest" message="tns:loginWithTokenRequest" />
+      <wsdl:output name="loginWithTokenResponse" message="tns:loginWithTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="unzipFile">
+      <wsdl:input name="unzipFileRequest" message="tns:unzipFileRequest" />
+      <wsdl:output name="unzipFileResponse" message="tns:unzipFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getGroupUuidForName">
+      <wsdl:input name="getGroupUuidForNameRequest" message="tns:getGroupUuidForNameRequest" />
+      <wsdl:output name="getGroupUuidForNameResponse" message="tns:getGroupUuidForNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <wsdl:input name="deleteUserRequest" message="tns:deleteUserRequest" />
+      <wsdl:output name="deleteUserResponse" message="tns:deleteUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="archiveItem">
+      <wsdl:input name="archiveItemRequest" message="tns:archiveItemRequest" />
+      <wsdl:output name="archiveItemResponse" message="tns:archiveItemResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SoapService41HttpBinding" type="tns:SoapService41PortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addGroup">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addGroupRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addGroupResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContributableCollections">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getContributableCollectionsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getContributableCollectionsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaskFilterNames">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTaskFilterNamesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTaskFilterNamesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSchema">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getSchemaRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSchemaResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rejectTask">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="rejectTaskRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="rejectTaskResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uploadFileRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="uploadFileResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userExists">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userExistsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userExistsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="newItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="newItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newVersionItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="newVersionItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="newVersionItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroup">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteGroupRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteGroupResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loginRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeUserFromAllGroups">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="removeUserFromAllGroupsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeUserFromAllGroupsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="editItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="editItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCollection">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCollectionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCollectionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteFileRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteFileResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserToGroup">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addUserToGroupRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addUserToGroupResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="acceptTask">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="acceptTaskRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="acceptTaskResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchItems">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchItemsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchItemsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="editUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="editUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isUserInGroup">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="isUserInGroupRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="isUserInGroupResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unlock">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="unlockRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unlockResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userNameExists">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="userNameExistsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="userNameExistsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaskList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTaskListRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTaskListResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeUserFromGroup">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="removeUserFromGroupRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeUserFromGroupResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="keepAlive">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="keepAliveRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="keepAliveResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCount">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryCountRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryCountResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelItemEdit">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelItemEditRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="cancelItemEditResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="saveItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="saveItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="groupExists">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="groupExistsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="groupExistsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeAllUsersFromGroup">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="removeAllUsersFromGroupRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="removeAllUsersFromGroupResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="logoutRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="logoutResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginWithToken">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="loginWithTokenRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loginWithTokenResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unzipFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="unzipFileRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unzipFileResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupUuidForName">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getGroupUuidForNameRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getGroupUuidForNameResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="archiveItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="archiveItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="archiveItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapService41">
+    <wsdl:port name="SoapService41HttpPort" binding="tns:SoapService41HttpBinding">
+      <wsdlsoap:address location="http://reach.gotdns.org/services/SoapService41" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
