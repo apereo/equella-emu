@@ -1,4 +1,4 @@
-# EMU (Equella Multiple Uploader)
+# EMU (Equella Metadata Utility)
 EMU is a tool for inspecting and bulk modifying metadata in EQUELLA. It is a .NET application written in C# and packaged as a Windows MSI. 
 
 ## Dependencies
