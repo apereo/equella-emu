@@ -32,14 +32,14 @@ namespace EquellaMetadataUtility
         {
             vsaEngine = new VsaEngine();
             vsaEngine.RootMoniker = "ScriptGlobals://JScript";
-            vsaEngine.Site = this;
+            vsaEngine.Site = (IJSVsaSite)this;
             vsaEngine.InitNew();
             vsaEngine.RootNamespace = "emu";
 
             // add system references
-            IVsaReferenceItem refItem = (IVsaReferenceItem)vsaEngine.Items.CreateItem("mscorlib", VsaItemType.Reference, VsaItemFlag.None);
+            IVsaReferenceItem refItem = (IVsaReferenceItem)vsaEngine.Items.CreateItem("mscorlib", (JSVsaItemType)VsaItemType.Reference, (JSVsaItemFlag)VsaItemFlag.None);
             refItem.AssemblyName = "mscorlib.dll";
-            refItem = (IVsaReferenceItem)vsaEngine.Items.CreateItem("system", VsaItemType.Reference, VsaItemFlag.None);
+            refItem = (IVsaReferenceItem)vsaEngine.Items.CreateItem("system", (JSVsaItemType)VsaItemType.Reference, (JSVsaItemFlag)VsaItemFlag.None);
             refItem.AssemblyName = "System.dll";
 
 
@@ -49,7 +49,7 @@ namespace EquellaMetadataUtility
             //globalItemLookupTable["oldvars"] = scriptVariables;
 
             // add object for eval results
-            IVsaGlobalItem item = (IVsaGlobalItem)vsaEngine.Items.CreateItem("scrEvalResult", VsaItemType.AppGlobal, VsaItemFlag.None);
+            IVsaGlobalItem item = (IVsaGlobalItem)vsaEngine.Items.CreateItem("scrEvalResult", (JSVsaItemType)VsaItemType.AppGlobal, (JSVsaItemFlag)VsaItemFlag.None);
             item.TypeString = evalResult.GetType().FullName;
             globalItemLookupTable["scrEvalResult"] = evalResult;
 
@@ -81,7 +81,7 @@ namespace EquellaMetadataUtility
         {
             globalItemLookupTable[name] = Object;
             removeObject(name);
-            IVsaGlobalItem item = (IVsaGlobalItem)vsaEngine.Items.CreateItem(name, VsaItemType.AppGlobal, VsaItemFlag.None);
+            IVsaGlobalItem item = (IVsaGlobalItem)vsaEngine.Items.CreateItem(name, (JSVsaItemType)VsaItemType.AppGlobal, (JSVsaItemFlag)VsaItemFlag.None);
             item.TypeString = Object.GetType().FullName;
         }
 
@@ -98,7 +98,7 @@ namespace EquellaMetadataUtility
                 }
             }
 
-            IVsaCodeItem codeItem = (IVsaCodeItem)vsaEngine.Items.CreateItem("code", VsaItemType.Code, VsaItemFlag.None);
+            IVsaCodeItem codeItem = (IVsaCodeItem)vsaEngine.Items.CreateItem("code", (JSVsaItemType)VsaItemType.Code, (JSVsaItemFlag)VsaItemFlag.None);
             codeItem.SourceText = script;
         }
 

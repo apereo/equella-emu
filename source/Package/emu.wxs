@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
    <Product Id='369d4343-dbd7-4c6d-9af2-588830589119' Name='EQUELLA Metadata Utility (EMU)' Language='1033' 
-            Version='2.1.3' Manufacturer='Pearson plc.' UpgradeCode='369d4343-dbd7-4c6d-9af2-588830589119' >
+            Version='2.1.5' Manufacturer='Pearson plc.' UpgradeCode='369d4343-dbd7-4c6d-9af2-588830589119' >
       <Package Description='EQUELLA Metadata Utility (EMU) Installer package'
                Comments='EQUELLA Metadata Utility MSI'
                Manufacturer='Pearson plc.'
