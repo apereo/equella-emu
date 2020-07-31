@@ -2,8 +2,8 @@
 EMU is a tool for inspecting and bulk modifying metadata in openEQUELLA. It is a .NET application written in C# and packaged as a Windows MSI. 
 
 ## Dependencies
-EMU requires .NET framework 3.5 or higher.
-To make modifications to and test EMU Visual C# 2008 or higher and WiX Toolset for packaging (wixtoolset.org) is required on the workstation. 
+EMU requires .NET framework 4.8 or higher.
+To make modifications to and test EMU, Visual Studio 10.0.30320.27 or higher and WiX Toolset v3.11.2 for packaging (https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm) is required on the workstation. 
 
 ## Packaging
 Build/rebuild the solution to generate a new version of emu.exe and the associated DLLs. Then run \Package\package.bat to create emu.msi.
